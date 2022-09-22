@@ -1,7 +1,7 @@
 .black-bg {
   background: black;
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
 }
 
@@ -16,8 +16,8 @@ body {
   align-items: center;
   justify-content: right;
   gap: 10px;
-  padding-right:10px;
-  padding-top:10px;
+  padding-right: 10px;
+  padding-top: 10px;
 }
 
 .box {
@@ -56,6 +56,7 @@ body {
 .link:link {
   text-decoration: none;
 }
+
 .link:hover {
   color: #fff
 }
@@ -67,7 +68,7 @@ body {
   border-style: solid;
   border-color: rgb(200, 200, 200);
   border-width: 1px;
-  
+
 }
 
 .body {
@@ -80,7 +81,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  
+
 }
 
 .item {
@@ -99,7 +100,7 @@ body {
   font-family: monospace;
   font-size: 50px;
   min-height: 100px;
-  min-width: 100px;
+  width: 100px;
 }
 
 .center {
@@ -113,8 +114,28 @@ body {
   padding-right: 10px;
 }
 
-.multilist {
-  color: rgba(200,200,200);
-  display: flex;
-  justify-content: space-around;
+
+
+@media screen and (max-width: 992px) {
+  .multilist {
+    color: rgba(200, 200, 200);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .multilist {
+    color: rgba(200, 200, 200);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 10px
+  }
+
+  .list {
+    padding-left: 20px;
+  }
 }
